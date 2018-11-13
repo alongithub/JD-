@@ -3,7 +3,8 @@ import Vuex  from 'vuex'
 Vue.use(Vuex)
 
 let state = {
-    searchHistory:[{name:123}],
+    searchHistory:localStorage.city?localStorage.city:[],
+    cartList:localStorage.cartList?localStorage.cartList:[],
 }
 
 //里面的方法用于改变state里面的数据
@@ -15,6 +16,17 @@ let mutations={
             {name:value}
         )
     },
+    addCart(state,json){
+        state.cartList.push(json)
+        console.log('----------')
+        console.log(json)
+    },
+    alterCart(){
+
+    }
+
+
+
 }
 
 const store = new Vuex.Store({

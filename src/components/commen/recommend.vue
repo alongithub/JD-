@@ -1,11 +1,9 @@
 <template>
     <div id="recommend">
-        <p class="tuijian">
-            <span>为您推荐</span>
-        </p>
+        
         
         <div id="recommendList">
-            <div v-for="shop in shopList" class="recommend_list">
+            <div v-for="(shop,index) in shopList" class="recommend_list" :key="index">
                 <router-link :to="shop.link">
                     <img class="photo" :src="shop.photo"/>
                     <p class="title overText2"><span class="tips" v-if="shop.tips">{{shop.tips}}</span>{{shop.title}}</p>
@@ -75,30 +73,7 @@
     #recommendList{
         overflow:hidden;
     }
-    .tuijian{
-        text-align:center;
-        height:3rem;
-        line-height:3rem;
-        position:relative;
-        margin:0 0.5rem;
-        span{
-            font-size:1rem;
-            padding:0 1.5rem;
-            color:#999;
-            background:#F0F0F0;
-            position:relative;
-            z-index:1;
-        }
-        &:after{
-            content:'';
-
-            position:absolute;
-            top:50%;
-            left:0;
-            width:100%;
-            border-bottom:1px solid #999;
-        }
-    }
+    
     .recommend_list{
         width:49.5vw;
         box-sizing:border-box;

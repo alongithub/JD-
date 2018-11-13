@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul id="footer">
-            <li v-for="(link,index) in links" @click="changeroute(index)" :class="{on:link.path==path}" >
+            <li v-for="(link,index) in links" @click="changeroute(index)" :class="{on:link.path==path}" :key="index">
                 <router-link :to="link.path">
                     <p>
                         <img :src="link.src" class="route"/>

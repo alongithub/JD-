@@ -21,7 +21,11 @@
             </div>
             <along-tools></along-tools>
         </div>
+
         <div class="recommendView">
+             <p class="tuijian">
+                <span>为您推荐</span>
+            </p>
             <along-recommend ref="recommend" ></along-recommend>
             <p class="getMore">加载更多</p>
         </div>
@@ -133,5 +137,29 @@
         height:2rem;
         text-align:center;
         line-height:2rem;
+    }
+    .tuijian{
+        text-align:center;
+        height:3rem;
+        line-height:3rem;
+        position:relative;
+        margin:0 0.5rem;
+        span{
+            font-size:1rem;
+            padding:0 1.5rem;
+            color:#999;
+            background:#F0F0F0;
+            position:relative;
+            z-index:1;
+        }
+        &:after{
+            content:'';
+
+            position:absolute;
+            top:50%;
+            left:0;
+            width:100%;
+            border-bottom:1px solid #999;
+        }
     }
 </style>

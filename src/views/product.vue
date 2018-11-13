@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="cart_bottom">
-                        <a href="javascript:;" class="sureAddToCart">加入购物车</a>
+                        <a href="javascript:;" class="sureAddToCart" @click="sureAddToCart()">加入购物车</a>
                         <router-link to="" class="sureBuyNow">立即购买</router-link>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                 selectedPrice:360,
                 selectedPlusPrice:300,
 
-                selectVersion:'彼岸准办',
+                selectVersion:'',
                 selectedNum:0,
 
 
@@ -147,6 +147,17 @@
                 
                 this.selectedNum += i;
                 
+            },
+            sureAddToCart(){
+                var json = {
+                    id:this.productId,
+                    title:'lg12yingcn 查宽屏IPS影评技术的坷拉激发ask老夫就挨了开始flak时间flash发神经浪费撒行方腊时尽量',
+                    photo:'/src/assets/static/pro2.webp',
+                    tabs:this.selectVersion,
+                    price:'1799',
+                    num:this.selectedNum,
+                }
+                this.$store.commit( 'addCart',json );
             }
         },
         mounted(){

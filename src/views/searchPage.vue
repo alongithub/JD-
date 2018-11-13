@@ -21,7 +21,7 @@
                 <a href="javascript:;" >s</a>
             </p>
             <div class="search_lists">
-                <span v-for="history in this.$store.state.searchHistory">
+                <span v-for="(history,i) in this.$store.state.searchHistory" :key="i">
                     {{history.name}}
                 </span>
             </div>
