@@ -24,7 +24,7 @@
             <a class="btn_comeStore" @click="comeStore()" href="javascript:;">
                 进店
             </a>
-            <router-link to="/main/cart" class="btn_cart">购物车</router-link>
+            <router-link to="/main/cart" class="btn_cart"><span v-if="$store.state.cartList.length!=0" class="cartNum">{{$store.state.cartList.length}}</span>购物车</router-link>
             <a class="btn_addToCart" @click="alertLayer()" href="javascript:;">加入购物车</a>
             <a class="btn_buyNow" @click="alertLayer()" href="javascript:;">立即购买</a>
             
@@ -97,7 +97,7 @@
                 selectedPlusPrice:300,
 
                 selectVersion:'',
-                selectedNum:0,
+                selectedNum:1,
 
 
             }
@@ -149,6 +149,9 @@
                 
             },
             sureAddToCart(){
+
+                this.closeLayer()
+
                 var json = {
                     id:this.productId,
                     title:'lg12yingcn 查宽屏IPS影评技术的坷拉激发ask老夫就挨了开始flak时间flash发神经浪费撒行方腊时尽量',
@@ -230,6 +233,7 @@
             line-height: 5.4rem;
         }
         .btn_cart{
+            position:relative;
             flex:1 1 2rem;
             font-size: 0.7rem;
             background:url(/src/assets/icon/cart.png) no-repeat;
@@ -251,6 +255,22 @@
             line-height: 3.5rem;
             font-size: 0.9rem;
         }
+    }
+    .cartNum{
+        color:#f00;
+        position:absolute;
+        right:0.2rem;
+        top:0.2rem;
+        border:1px solid #f00;
+        padding:0 0.4rem;
+        border-radius:0.5rem;
+        height: 0.9rem;
+        line-height: 0.9rem;
+        font-size: 0.8rem;
+        font-weight: blod;
+        background: #fff;
+        transform: scale(1)
+
     }
 
     // 弹出加入购物车层

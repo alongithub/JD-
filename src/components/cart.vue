@@ -77,14 +77,17 @@
 
             const $home = this.$refs.home
             $home.onscroll = () =>{
-                if( this.has ){
+                if(this.$store.state.cartList.length==0){
+                    if( this.has ){
                     
-                    if( $home.scrollHeight - $home.offsetHeight == $home.scrollTop ){
-                        this.has = false;
-                        this.$refs.recommend.addShop();
+                        if( $home.scrollHeight - $home.offsetHeight == $home.scrollTop ){
+                            this.has = false;
+                            this.$refs.recommend.addShop();
 
+                        }
                     }
                 }
+                
             }
         },
         components:{
