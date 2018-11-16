@@ -1,4 +1,4 @@
-# jd
+# vue 京东
 #### along 2018.11
 ##### A Vue.js project ,仿京东app vue+vue-router+vuex+ES6...
 
@@ -18,6 +18,17 @@ npm run dev
 npm run build
 ```
 
-# 目标任务
-- [x] 路由
+## 目标任务
+- [x] 搜索页
+- [ ] 私信页
+- [x] 主页
+- [ ] 分类
+- [ ] 我的
+- [ ] 发现
+- [x] 购物车
+- [x] 推荐商品下拉加载
+- [x] 查看商品详情
+- [x] 商品加入购物车
+
+
 
