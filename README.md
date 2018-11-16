@@ -1,6 +1,9 @@
 # jd
+#### along 2018.11
+##### A Vue.js project ,仿京东app vue+vue-router+vuex+ES6...
 
-> A Vue.js project
+
+
 
 ## Build Setup
 
@@ -15,6 +18,6 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-"# JD-" 
-"# Test" 
+# 目标任务
+- [x] 路由
+
